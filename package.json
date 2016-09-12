@@ -1,0 +1,16 @@
+{
+  "name": "docker-node-mongo-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0",
+    "nodemon": "^1.10.2"
+  }
+}

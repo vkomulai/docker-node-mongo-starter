@@ -1,0 +1,20 @@
+db:
+  image: mongo:3.2.6
+  volumes:
+    - /data/db
+  ports:
+    - '27017:27017'
+  command: --smallfiles
+
+web:
+  build: .
+  command: node_modules/.bin/nodemon app.js
+  environment:
+    NODE_ENV: 'docker-development'
+  ports:
+    - '3000:3000'
+  volumes:
+    - .:/home/starter/starter-app
+    - ./node_modules:/home/starter/starter-app/node_modules
+  links:
+    - db:dockerized_mongo
